@@ -23,8 +23,8 @@ user tap on Payment button
     Element Should Be Visible    ${PAYMENT_BUTTON}
     Click Element    ${PAYMENT_BUTTON}
 
-the system displays the Checkout screen
-    Element Should Be Visible    ${CHECKOUT_TITLE}
+the system displays the Checkout Payment screen
+    Element Should Be Visible    ${PAYMENT_CHECKOUT_TITLE}
 
 user select CASH method
     Element Should Be Visible    ${CASH}
@@ -41,3 +41,25 @@ user select PAID EXTERNALLY method
 user select GIFT CARD method
     Element Should Be Visible    ${GIFT_CARD}
     Click Element    ${GIFT_CARD}
+
+the system dispays the Payment by Cash screen
+    Element Should Be Visible    ${PAYMENT_BY_CASH_TITLE}
+
+user tap on Begin Charge button
+    Element Should Be Visible    ${BEGIN_CHARGE_BUTTON}
+    Click Element    ${BEGIN_CHARGE_BUTTON}
+    Sleep    5s
+the system navigate user to Payment Confirmed screen
+    Element Should Be Visible    ${PAYMENT_IS_CONFIRMED}
+
+the system displays Payment successfully message
+    Element Should Be Visible    ${PAYMENT_SUCCESS_MESSAGE}
+
+user tap on No Receipt button
+    Element Should Be Visible    ${NO_RECEIPT_BUTTON}
+    Click Element    ${NO_RECEIPT_BUTTON}
+    Sleep    5s
+
+the system navigate user back to Checkout Tab
+    Element Should Be Visible    ${CHANGE_POSITION_TEXT}
+   

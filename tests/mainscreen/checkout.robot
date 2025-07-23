@@ -12,13 +12,19 @@ Verify the user sign in successfully when input correct SALON account
     Sleep    5s
     And the user is on Checkout tab
 
-Verify the user select Technician and Service successfully
+Verify the user checkout with CASH method successfully
     Given the user is on Checkout tab
     And user select Technician
     Then the system displays the Select Service screen
     And user select Service
-    And the system display correct Subtotal Amount
     Then user tap on Payment button
     Sleep    5s
-    And the system displays the Checkout screen
+    And the system displays the Checkout Payment screen
+    Then user select CASH method
+    And the system dispays the Payment by Cash screen
+    And user tap on Begin Charge button
+    Then the system navigate user to Payment Confirmed screen
+    Then the system displays Payment successfully message
+    When user tap on No Receipt button
+    Then the system navigate user back to Checkout Tab
 

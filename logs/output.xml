@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-07-22T17:27:29.649386" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-07-23T14:13:28.549621" rpa="false" schemaversion="5">
 <suite id="s1" name="Checkout" source="D:\Automation-Testing\Robot-Framework\Salonbookly-POS\tests\mainscreen\checkout.robot">
 <kw name="Access to POS" owner="common-keywords" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
@@ -18,221 +18,308 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-07-22T17:27:30.228779" elapsed="9.455544"/>
+<status status="PASS" start="2025-07-23T14:13:29.204035" elapsed="9.520637"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-22T17:27:44.686275" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-07-23T14:13:43.727018" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-22T17:27:39.684914" elapsed="5.001638"/>
+<status status="PASS" start="2025-07-23T14:13:38.725141" elapsed="5.002141"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:27:30.227722" elapsed="14.459050"/>
+<status status="PASS" start="2025-07-23T14:13:29.202946" elapsed="14.524595"/>
 </kw>
 <test id="s1-t1" name="Verify the user sign in successfully when input correct SALON account" line="7">
 <kw name="Given the Salon tab is selected" owner="sign-in-keywords">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:45.723902" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="SALON Sign In" and @clickable="true"]</msg>
+<msg time="2025-07-23T14:13:44.810122" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="SALON Sign In" and @clickable="true"]</msg>
 <arg>${SALON_TAB_SELECTED}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:27:44.689034" elapsed="1.035092"/>
+<status status="PASS" start="2025-07-23T14:13:43.729757" elapsed="1.080550"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-22T17:27:47.725801" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-07-23T14:13:46.811724" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-22T17:27:45.724612" elapsed="2.001430"/>
+<status status="PASS" start="2025-07-23T14:13:44.810642" elapsed="2.001321"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:27:44.688387" elapsed="3.037858"/>
+<status status="PASS" start="2025-07-23T14:13:43.729157" elapsed="3.083008"/>
 </kw>
 <kw name="When user input correct Salon Email" owner="sign-in-keywords">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:47.943606" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
+<msg time="2025-07-23T14:13:47.039201" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
 <arg>${USERNAME_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:27:47.727827" elapsed="0.216052"/>
+<status status="PASS" start="2025-07-23T14:13:46.813638" elapsed="0.225796"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:47.947417" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="User Name"]'.</msg>
-<msg time="2025-07-22T17:27:48.204832" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
+<msg time="2025-07-23T14:13:47.043310" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="User Name"]'.</msg>
+<msg time="2025-07-23T14:13:48.280842" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
 <arg>${USERNAME_FIELD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:47.944192" elapsed="0.260846"/>
+<status status="PASS" start="2025-07-23T14:13:47.039839" elapsed="1.241211"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:48.209047" level="INFO">Typing text 'salon.dev@yopmail.com' into text field 'xpath=//android.widget.EditText[@hint="User Name"]'</msg>
-<msg time="2025-07-22T17:27:49.331327" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
+<msg time="2025-07-23T14:13:48.285178" level="INFO">Typing text 'salon.dev@yopmail.com' into text field 'xpath=//android.widget.EditText[@hint="User Name"]'</msg>
+<msg time="2025-07-23T14:13:48.490864" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${SALON_EMAIL}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:48.205480" elapsed="1.126055"/>
+<status status="PASS" start="2025-07-23T14:13:48.281569" elapsed="0.209567"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:49.335460" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
-<msg time="2025-07-22T17:27:51.122529" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
+<msg time="2025-07-23T14:13:48.495375" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
+<msg time="2025-07-23T14:13:50.259103" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
 <arg>${SIGN_IN_TITLE}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:49.331893" elapsed="1.790992"/>
+<status status="PASS" start="2025-07-23T14:13:48.491561" elapsed="1.767814"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:27:47.727184" elapsed="3.395965"/>
+<status status="PASS" start="2025-07-23T14:13:46.813112" elapsed="3.446753"/>
 </kw>
 <kw name="And user input correct Password" owner="sign-in-keywords">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:51.333199" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
+<msg time="2025-07-23T14:13:50.479773" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:27:51.125107" elapsed="0.208453"/>
+<status status="PASS" start="2025-07-23T14:13:50.262536" elapsed="0.217463"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:51.338485" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="Password"]'.</msg>
-<msg time="2025-07-22T17:27:52.517600" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
+<msg time="2025-07-23T14:13:50.483923" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="Password"]'.</msg>
+<msg time="2025-07-23T14:13:50.691209" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:51.333983" elapsed="1.183824"/>
+<status status="PASS" start="2025-07-23T14:13:50.480319" elapsed="0.211109"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:52.521690" level="INFO">Typing text 'Dev123!@#' into text field 'xpath=//android.widget.EditText[@hint="Password"]'</msg>
-<msg time="2025-07-22T17:27:52.831248" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
+<msg time="2025-07-23T14:13:50.695545" level="INFO">Typing text 'Dev123!@#' into text field 'xpath=//android.widget.EditText[@hint="Password"]'</msg>
+<msg time="2025-07-23T14:13:51.819779" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${SALON_PASSWORD}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:52.518268" elapsed="0.313140"/>
+<status status="PASS" start="2025-07-23T14:13:50.691809" elapsed="1.128141"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:27:51.124282" elapsed="1.707301"/>
+<status status="PASS" start="2025-07-23T14:13:50.261596" elapsed="1.558532"/>
 </kw>
 <kw name="Then user tap on Sign In button" owner="sign-in-keywords">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:52.836609" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
-<msg time="2025-07-22T17:27:54.412678" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
+<msg time="2025-07-23T14:13:51.824701" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
+<msg time="2025-07-23T14:13:53.354181" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
 <arg>${SIGN_IN_TITLE}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:52.833592" elapsed="1.579285"/>
+<status status="PASS" start="2025-07-23T14:13:51.821552" elapsed="1.532869"/>
 </kw>
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:54.778261" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
+<msg time="2025-07-23T14:13:53.585200" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
 <arg>${SIGN_IN_BUTTON}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:27:54.413181" elapsed="0.365309"/>
+<status status="PASS" start="2025-07-23T14:13:53.354824" elapsed="0.230548"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:27:54.784067" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="true"]'.</msg>
-<msg time="2025-07-22T17:27:55.075917" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
+<msg time="2025-07-23T14:13:53.589116" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="true"]'.</msg>
+<msg time="2025-07-23T14:13:53.839992" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
 <arg>${SIGN_IN_BUTTON}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:27:54.778962" elapsed="0.297111"/>
+<status status="PASS" start="2025-07-23T14:13:53.585695" elapsed="0.254562"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:27:52.832604" elapsed="2.243634"/>
+<status status="PASS" start="2025-07-23T14:13:51.820939" elapsed="2.019559"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-22T17:28:00.077646" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-07-23T14:13:58.842284" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-22T17:27:55.076911" elapsed="5.000966"/>
+<status status="PASS" start="2025-07-23T14:13:53.841114" elapsed="5.001394"/>
 </kw>
 <kw name="And the user is on Checkout tab" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:00.935657" level="INFO">xpath criteria: //android.view.View[@content-desc="Change position"]</msg>
+<msg time="2025-07-23T14:13:59.645666" level="INFO">xpath criteria: //android.view.View[@content-desc="Change position"]</msg>
 <arg>${CHANGE_POSITION_TEXT}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:00.079298" elapsed="0.856985"/>
+<status status="PASS" start="2025-07-23T14:13:58.843864" elapsed="0.802752"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:00.078596" elapsed="0.857901"/>
+<status status="PASS" start="2025-07-23T14:13:58.843296" elapsed="0.803527"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:27:44.686936" elapsed="16.250200"/>
+<status status="PASS" start="2025-07-23T14:13:43.727723" elapsed="15.919629"/>
 </test>
-<test id="s1-t2" name="Verify the user select Technician and Service successfully" line="15">
+<test id="s1-t2" name="Verify the user checkout with CASH method successfully" line="15">
 <kw name="Given the user is on Checkout tab" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:01.424413" level="INFO">xpath criteria: //android.view.View[@content-desc="Change position"]</msg>
+<msg time="2025-07-23T14:13:59.979901" level="INFO">xpath criteria: //android.view.View[@content-desc="Change position"]</msg>
 <arg>${CHANGE_POSITION_TEXT}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:00.940472" elapsed="0.484189"/>
+<status status="PASS" start="2025-07-23T14:13:59.649812" elapsed="0.330319"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:00.939989" elapsed="0.484934"/>
+<status status="PASS" start="2025-07-23T14:13:59.649327" elapsed="0.331070"/>
 </kw>
 <kw name="And user select Technician" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:01.714297" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
+<msg time="2025-07-23T14:14:00.346394" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
 <arg>${TECHNICIAN_CARD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:01.427411" elapsed="0.287050"/>
+<status status="PASS" start="2025-07-23T14:13:59.981976" elapsed="0.364651"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:01.718549" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc, "Mira")]'.</msg>
-<msg time="2025-07-22T17:28:02.024956" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
+<msg time="2025-07-23T14:14:00.350477" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc, "Mira")]'.</msg>
+<msg time="2025-07-23T14:14:00.624834" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
 <arg>${TECHNICIAN_CARD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:28:01.714759" elapsed="0.310425"/>
+<status status="PASS" start="2025-07-23T14:14:00.346976" elapsed="0.278029"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:01.425878" elapsed="0.599471"/>
+<status status="PASS" start="2025-07-23T14:13:59.981348" elapsed="0.643834"/>
 </kw>
 <kw name="Then the system displays the Select Service screen" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:02.674517" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Services"]</msg>
+<msg time="2025-07-23T14:14:01.252006" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Services"]</msg>
 <arg>${SELECT_SERVICE_TITLE}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:02.027635" elapsed="0.647142"/>
+<status status="PASS" start="2025-07-23T14:14:00.626412" elapsed="0.625759"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:02.026441" elapsed="0.648506"/>
+<status status="PASS" start="2025-07-23T14:14:00.625843" elapsed="0.626501"/>
 </kw>
 <kw name="And user select Service" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:03.091972" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"30 mins")]</msg>
+<msg time="2025-07-23T14:14:01.692661" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"30 mins")]</msg>
 <arg>${SERVICE_CARD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:02.676885" elapsed="0.415324"/>
+<status status="PASS" start="2025-07-23T14:14:01.253614" elapsed="0.439285"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:03.095608" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"30 mins")]'.</msg>
-<msg time="2025-07-22T17:28:03.503270" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"30 mins")]</msg>
+<msg time="2025-07-23T14:14:01.696644" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"30 mins")]'.</msg>
+<msg time="2025-07-23T14:14:02.158871" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"30 mins")]</msg>
 <arg>${SERVICE_CARD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:28:03.092669" elapsed="0.410818"/>
+<status status="PASS" start="2025-07-23T14:14:01.693284" elapsed="0.465757"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:02.676084" elapsed="0.827592"/>
-</kw>
-<kw name="And the system display correct Subtotal Amount" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:04.217007" level="INFO">xpath criteria: //android.view.View[@content-desc="Subtotal"]</msg>
-<arg>${SUBTOTAL}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:03.505572" elapsed="0.711682"/>
-</kw>
-<status status="PASS" start="2025-07-22T17:28:03.504893" elapsed="0.712577"/>
+<status status="PASS" start="2025-07-23T14:14:01.253049" elapsed="0.906173"/>
 </kw>
 <kw name="Then user tap on Payment button" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:04.457836" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"]</msg>
+<msg time="2025-07-23T14:14:02.906969" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"]</msg>
 <arg>${PAYMENT_BUTTON}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:04.219391" elapsed="0.238605"/>
+<status status="PASS" start="2025-07-23T14:14:02.160478" elapsed="0.746692"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:04.461500" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Payment"]'.</msg>
-<msg time="2025-07-22T17:28:04.750344" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"]</msg>
+<msg time="2025-07-23T14:14:02.911161" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Payment"]'.</msg>
+<msg time="2025-07-23T14:14:03.285234" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"]</msg>
 <arg>${PAYMENT_BUTTON}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-07-22T17:28:04.458370" elapsed="0.292276"/>
+<status status="PASS" start="2025-07-23T14:14:02.907494" elapsed="0.377981"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:04.218711" elapsed="0.532162"/>
+<status status="PASS" start="2025-07-23T14:14:02.159881" elapsed="1.125928"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-22T17:28:09.753339" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-07-23T14:14:08.288189" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-22T17:28:04.751819" elapsed="5.001751"/>
+<status status="PASS" start="2025-07-23T14:14:03.286694" elapsed="5.001729"/>
 </kw>
-<kw name="And the system displays the Checkout screen" owner="tab-checkout-keyword">
+<kw name="And the system displays the Checkout Payment screen" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-07-22T17:28:10.014843" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Checkout"]</msg>
-<arg>${CHECKOUT_TITLE}</arg>
+<msg time="2025-07-23T14:14:08.568250" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Checkout"]</msg>
+<arg>${PAYMENT_CHECKOUT_TITLE}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-07-22T17:28:09.755061" elapsed="0.260050"/>
+<status status="PASS" start="2025-07-23T14:14:08.289892" elapsed="0.278593"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:09.754507" elapsed="0.260844"/>
+<status status="PASS" start="2025-07-23T14:14:08.289354" elapsed="0.279408"/>
 </kw>
-<status status="PASS" start="2025-07-22T17:28:00.938854" elapsed="9.077343"/>
+<kw name="Then user select CASH method" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:08.757100" level="INFO">xpath criteria: //android.view.View[@content-desc="Cash"]</msg>
+<arg>${CASH}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:08.571802" elapsed="0.185461"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:08.760962" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Cash"]'.</msg>
+<msg time="2025-07-23T14:14:09.005860" level="INFO">xpath criteria: //android.view.View[@content-desc="Cash"]</msg>
+<arg>${CASH}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-23T14:14:08.757593" elapsed="0.248597"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:08.570810" elapsed="0.435603"/>
+</kw>
+<kw name="And the system dispays the Payment by Cash screen" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:09.969561" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Back Payment by Cash"]</msg>
+<arg>${PAYMENT_BY_CASH_TITLE}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:09.007669" elapsed="0.962133"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:09.007119" elapsed="0.962866"/>
+</kw>
+<kw name="And user tap on Begin Charge button" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:10.122569" level="INFO">xpath criteria: //android.view.View[@content-desc="Begin Charge"]</msg>
+<arg>${BEGIN_CHARGE_BUTTON}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:09.971517" elapsed="0.151229"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:10.126450" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Begin Charge"]'.</msg>
+<msg time="2025-07-23T14:14:10.358953" level="INFO">xpath criteria: //android.view.View[@content-desc="Begin Charge"]</msg>
+<arg>${BEGIN_CHARGE_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-23T14:14:10.123063" elapsed="0.236199"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-23T14:14:15.360453" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-23T14:14:10.359684" elapsed="5.001250"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:09.970940" elapsed="5.390176"/>
+</kw>
+<kw name="Then the system navigate user to Payment Confirmed screen" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:15.575560" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Your payment is confirmed!"]</msg>
+<arg>${PAYMENT_IS_CONFIRMED}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:15.362402" elapsed="0.213463"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:15.361798" elapsed="0.214274"/>
+</kw>
+<kw name="Then the system displays Payment successfully message" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:15.724678" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</msg>
+<arg>${PAYMENT_SUCCESS_MESSAGE}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:15.577502" elapsed="0.147514"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:15.576945" elapsed="0.148249"/>
+</kw>
+<kw name="When user tap on No Receipt button" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:15.873422" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="No receipt"]</msg>
+<arg>${NO_RECEIPT_BUTTON}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:15.726599" elapsed="0.146985"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:15.877264" level="INFO">Clicking element 'xpath=//android.view.View[normalize-space(@content-desc)="No receipt"]'.</msg>
+<msg time="2025-07-23T14:14:17.076622" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="No receipt"]</msg>
+<arg>${NO_RECEIPT_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-23T14:14:15.873895" elapsed="1.202925"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-23T14:14:22.079067" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-23T14:14:17.077123" elapsed="5.002176"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:15.726062" elapsed="6.353414"/>
+</kw>
+<kw name="Then the system navigate user back to Checkout Tab" owner="tab-checkout-keyword">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-07-23T14:14:22.348764" level="INFO">xpath criteria: //android.view.View[@content-desc="Change position"]</msg>
+<arg>${CHANGE_POSITION_TEXT}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-07-23T14:14:22.080739" elapsed="0.268337"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:14:22.080204" elapsed="0.269084"/>
+</kw>
+<status status="PASS" start="2025-07-23T14:13:59.648356" elapsed="22.701761"/>
 </test>
-<status status="PASS" start="2025-07-22T17:27:29.653785" elapsed="40.365089"/>
+<status status="PASS" start="2025-07-23T14:13:28.552957" elapsed="53.798736"/>
 </suite>
 <statistics>
 <total>
