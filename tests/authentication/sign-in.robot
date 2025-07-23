@@ -8,5 +8,5 @@ Verify the user sign in successfully when input correct SALON account
     When user input correct Salon Email
     And user input correct Password
     Then user tap on Sign In button
-    Sleep    8s
-    And the Change Position is visible
+    Sleep    5s
+    And the user is on Checkout screen
