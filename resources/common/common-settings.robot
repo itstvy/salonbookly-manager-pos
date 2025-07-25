@@ -1,4 +1,5 @@
 *** Settings ***
+
 Library    AppiumLibrary
 
 Resource    ../../resources/common/common-keywords.robot

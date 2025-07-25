@@ -28,3 +28,13 @@ Verify the user checkout with CASH method successfully
     When user tap on No Receipt button
     Then the system navigate user back to Checkout Tab
 
+Verify the user checkout with PAID EXTERNALLY method successfully
+    Given the user is on Checkout tab
+    And user select Technician
+    Then the system displays the Select Service screen
+    And user select Service
+    Then user tap on Payment button
+    Sleep    5s
+    And the system displays the Checkout Payment screen
+    And user select PAID EXTERNALLY method
+    

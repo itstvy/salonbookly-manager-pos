@@ -45,9 +45,9 @@ user select GIFT CARD method
 the system dispays the Payment by Cash screen
     Element Should Be Visible    ${PAYMENT_BY_CASH_TITLE}
 
-user tap on Begin Charge button
-    Element Should Be Visible    ${BEGIN_CHARGE_BUTTON}
-    Click Element    ${BEGIN_CHARGE_BUTTON}
+user tap on Cash Begin Charge button
+    Element Should Be Visible    ${CASH_BEGIN_CHARGE_BUTTON}
+    Click Element    ${CASH_BEGIN_CHARGE_BUTTON}
     Sleep    5s
 the system navigate user to Payment Confirmed screen
     Element Should Be Visible    ${PAYMENT_IS_CONFIRMED}
