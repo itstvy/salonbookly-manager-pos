@@ -22,3 +22,4 @@ user tap on Sign In button
     Click Element    ${SIGN_IN_TITLE}
     Element Should Be Visible    ${SIGN_IN_BUTTON}
     Click Element    ${SIGN_IN_BUTTON}
+    Sleep    5s

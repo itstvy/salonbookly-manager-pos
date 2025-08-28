@@ -12,3 +12,9 @@ Access to POS
     ...    appActivity=${APP_ACTIVITY}
     ...    automationName=${AUTOMATION_NAME}
     Sleep    5s
+
+#Set Test Message
+Set Element to Test Message
+    [Arguments]    ${element}    ${append}=True
+    Set Test Message    Success Message: ${element}
+    # Set Test Message    Payment Confirm: ${element}    append=${append}

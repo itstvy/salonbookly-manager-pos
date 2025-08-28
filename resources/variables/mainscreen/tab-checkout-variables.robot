@@ -8,8 +8,8 @@ ${PAYMENT_SUCCESS_MESSAGE}    xpath=//android.view.View[normalize-space(@content
 
 #Data
 ${TECHNICIAN_NAME}    Mira
-${SERVICE_NAME}    Classic Manicure
-${SERVICE_DURATION}    30 mins
+${SERVICE_NAME}    Lip Wax
+${SERVICE_DURATION}    15 mins
 ${REAL_SUBTOTAL_AMOUNT}
 ${REAL_TAX_AMOUNT}
 ${REAL_BALANCE_DUE}
@@ -74,10 +74,15 @@ ${GIFT_CARD}    xpath=//android.view.View[@content-desc="Gift Card"]
 
 #Elements in Payment by CASH screen
 ${PAYMENT_BY_CASH_TITLE}    xpath=//android.view.View[normalize-space(@content-desc)="Back Payment by Cash"]
-${CASH_BEGIN_CHARGE_BUTTON}    xpath=//android.view.View[@content-desc="Begin Charge"]
+${CASH_BEGIN_CHARGE_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Begin Charge"]
+
+#Elements in Payment by CREDIT CARD screen
+${PAYMENT_BY_CREDIT_CARD_TITLE}    xpath=//android.view.View[normalize-space(@content-desc)="Back Payment by card"]
+${CREDIT_CARD_BEGIN_CHARGE_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Begin Charge"]
 
 #Elements in Payment by PAID EXTERNALLY screen
-${PAID_EXTERNALLY_TITLE}    xpath=//android.view.View[normalize-space(@content-desc)="Back Paid Externally"]
+${PAYMENT_BY_PAID_EXTERNALLY_TITLE}    xpath=//android.view.View[normalize-space(@content-desc)="Back Paid Externally"]
+${PAID_EXTERNALLY_TEXT}    xpath=//android.view.View[normalize-space(@content-desc)="Paid Externally"]
 ${PAID_EXTERNALLY_BEGIN_CHARGE_BUTTON}    xpath=//android.view.View[@content-desc="Begin Charge"]
 
 #Elements in Payment by Gift Card screen
@@ -101,7 +106,7 @@ ${CUSTOM_AMOUNT_FIELD}    xpath=//android.view.View[normalize-space(@content-des
 ${CLEAR_CUSTOM_AMOUNT_BUTTON}    xpath=//android.view.View[@content-desc="Clear"]
 ${CLOSE_CUSTOM_AMOUNT_FORM_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="CUSTOM AMOUNT Tips amount"]/android.view.View[1]
 ${SUBMIT_CUSTOM_AMOUNT_BUTTON}    xpath=//android.view.View[@content-desc="Submit"]
-${SKIP_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Skip"]
+${SKIP_TIP_BUTTON}    xpath=//android.view.View[@content-desc="Skip"]
 
 #Elements in Payment Confirmed screen
 ${PAYMENT_IS_CONFIRMED}    xpath=//android.view.View[normalize-space(@content-desc)="Your payment is confirmed!"]

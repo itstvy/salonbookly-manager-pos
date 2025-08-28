@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../../resources/common/common-settings.robot
 *** Variables ***
+#Connect to POS and Provide Salonbookly information
 ${REMOTE_URL}        http://127.0.0.1:4723
 ${PLATFORM_NAME}    Android
 ${PLATFORM_VERSION}    11
