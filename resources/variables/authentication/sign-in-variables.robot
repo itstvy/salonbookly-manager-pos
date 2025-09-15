@@ -3,7 +3,7 @@ Resource    ../../../resources/common/common-settings.robot
 
 *** Variables ***
 #Data
-${SALON_EMAIL}    salon.dev@yopmail.com
+${SALON_EMAIL}    cute.salon@yopmail.com
 ${SALON_PASSWORD}    Dev123!@#
 
 #Locators

@@ -7,12 +7,13 @@ Resource    ../../../resources/common/common-settings.robot
 ${PAYMENT_SUCCESS_MESSAGE}    xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]
 
 #Data
-${TECHNICIAN_NAME}    Mira
-${SERVICE_NAME}    Lip Wax
-${SERVICE_DURATION}    15 mins
+${TECHNICIAN_NAME}    Bethany
+${SERVICE_NAME}    Classic Manicure
+${SERVICE_DURATION}    10 mins
 ${REAL_SUBTOTAL_AMOUNT}
 ${REAL_TAX_AMOUNT}
 ${REAL_BALANCE_DUE}
+${EXIST_CLIENT_PHONE_NUMBER}    5555555501
 
 #Elements in Checkout tab
 ${CHANGE_POSITION_TEXT}    xpath=//android.view.View[normalize-space(@content-desc)="Change position"]
@@ -41,15 +42,38 @@ ${SELECT_SERVICE_TITLE}    xpath=//android.view.View[normalize-space(@content-de
 ${SEARCH_SERVICE_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="Search by Service Name"]
 ${CHANGE_SERVICE_POSITION_ON}    xpath=//android.view.View[@content-desc="On"]
 ${CHANGE_SERVICE_POSITION_ON}    xpath=//android.view.View[@content-desc="Off"]
-
+${ALL_CATEGORIES_BUTTON}    xpath=//android.view.View[contains(@content-desc,"All Categories")]
 ${SERVICE_CARD}    xpath=//android.view.View[contains(@content-desc,"${SERVICE_NAME}") and contains(@content-desc,"${SERVICE_DURATION}")]
+
+#Element in Add Client at Cart
 ${ADD_CLIENT_BUTTON}    xpath=(//android.view.View[@content-desc="Client"])[1]
+${SELECT_CLIENT_TITLE}    xpath=//android.view.View[contains(@content-desc,"SELECT CLIENT")]
+${SEARCH_CLIENT_FIELD}    xpath=//android.view.View[normalize-space(@hint)="Phone Number"][@clickable='false']
+${SEARCH_RESULT_TITLE}    xpath=//android.view.View[@content-desc="Search Result"]
+${SUBMIT_BUTTON_TO_ADD_CLIENT}    xpath=//android.view.View[@content-desc="Submit"]
+${REMOVE_CLIENT_BUTTON}    xpath=//android.view.View[@content-desc="Remove"]
+${CLIENT_NOT_EXIST_VALIDATION_TEXT}    xpath=//android.widget.ImageView[contains(@content-desc,"Not a member yet.")]
+${ADD_NEW_CLIENT_BUTTON}    xpath=//android.view.View[@content-desc="Create New Client"]
+
+#Element in Create new Client form at Cart
+${SELECT_CONTACT_FORM_TITLE}    xpath=//android.view.View[@content-desc="SELECT CONTACT"]
+${CLIENT_FIRST_NAME_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="First Name"]
+${CLIENT_LAST_NAME_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="Last Name"]
+${CLIENT_EMAIL_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="Email"]
+${CLIENT_DATE_OF_BIRTH_FIELD}    xpath=//android.view.View[normalize-space(@hint)="Date of Birth"]
+${DATE_OF_BIRTH_TITLE_MODAL}    xpath=//android.view.View[@content-desc="Date of Birth"]
+${CLIENT_BUSINESS_NAME_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="Business name"]
+${CLIENT_ADDRESS_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="Address"]
+${CANCEL_ADD_NEW_CLIENT_BUTTON}    xpath=//android.view.View[@content-desc="Cancel"]
+${SUBMIT_ADD_NEW_CLIENT_BUTTON}    xpath=//android.view.View[@content-desc="Submit"]
+
+
+#Element in Discount modal
 ${DISCOUNT_BUTTON}    xpath=(//android.view.View[@content-desc="Discount"])[2][@enabled='true']
 ${HOLD_TICKET_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Hold Ticket"]
 ${ADD_TECHNICIAN_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Add Technician"]
 ${ADD_GIFT_CARD_BUTTON}    xpath=(//android.view.View[normalize-space(@content-desc)="Gift Card"])[1]
 ${DISCARD_BUTTON}    xpath=//android.view.View[@content-desc="Discard"]
-${ALL_CATEGORIES_BUTTON}    xpath=//android.view.View[contains(@content-desc,"All Categories")]
 
 ${SUBTOTAL_AMOUNT}    xpath=(//android.view.View[@content-desc="${REAL_SUBTOTAL_AMOUNT}"])[1]
 ${TAX_AMOUNT}    xpath=(//android.view.View[@content-desc="${REAL_TAX_AMOUNT}"])[2]

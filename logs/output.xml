@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-08-28T11:31:52.938134" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-09-15T16:36:32.793515" rpa="false" schemaversion="5">
 <suite id="s1" name="Checkout" source="D:\Automation-Testing\Robot-Framework\Salonbookly-POS\tests\mainscreen\checkout.robot">
 <kw name="Access to POS" owner="common-keywords" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
@@ -18,589 +18,1120 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-08-28T11:31:53.863223" elapsed="10.168702"/>
+<status status="PASS" start="2025-09-15T16:36:37.471435" elapsed="12.612540"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:09.033927" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-09-15T16:36:55.086443" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:04.032461" elapsed="5.001747"/>
+<status status="PASS" start="2025-09-15T16:36:50.084828" elapsed="5.001930"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:31:53.861735" elapsed="15.172690"/>
+<status status="PASS" start="2025-09-15T16:36:37.468007" elapsed="17.619047"/>
 </kw>
 <test id="s1-t1" name="Verify the user sign in successfully when input correct SALON account" line="7">
 <kw name="Given the Salon tab is selected" owner="sign-in-keywords">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:10.072832" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="SALON Sign In" and @clickable="true"]</msg>
+<msg time="2025-09-15T16:36:56.111516" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="SALON Sign In" and @clickable="true"]</msg>
 <arg>${SALON_TAB_SELECTED}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:09.036553" elapsed="1.036536"/>
+<status status="PASS" start="2025-09-15T16:36:55.089937" elapsed="1.021777"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:12.074814" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-09-15T16:36:58.112652" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:10.073571" elapsed="2.001474"/>
+<status status="PASS" start="2025-09-15T16:36:56.112083" elapsed="2.000805"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:09.036016" elapsed="3.039226"/>
+<status status="PASS" start="2025-09-15T16:36:55.089032" elapsed="3.024067"/>
 </kw>
 <kw name="When user input correct Salon Email" owner="sign-in-keywords">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:12.301153" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
+<msg time="2025-09-15T16:36:58.436827" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
 <arg>${USERNAME_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:12.076710" elapsed="0.224641"/>
+<status status="PASS" start="2025-09-15T16:36:58.114521" elapsed="0.322545"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:12.307583" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="User Name"]'.</msg>
-<msg time="2025-08-28T11:32:13.505079" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
+<msg time="2025-09-15T16:36:58.445516" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="User Name"]'.</msg>
+<msg time="2025-09-15T16:36:59.636547" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
 <arg>${USERNAME_FIELD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:12.301697" elapsed="1.203550"/>
+<status status="PASS" start="2025-09-15T16:36:58.437551" elapsed="1.199219"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:13.511772" level="INFO">Typing text 'salon.dev@yopmail.com' into text field 'xpath=//android.widget.EditText[@hint="User Name"]'</msg>
-<msg time="2025-08-28T11:32:13.845316" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
+<msg time="2025-09-15T16:36:59.645250" level="INFO">Typing text 'cute.salon@yopmail.com' into text field 'xpath=//android.widget.EditText[@hint="User Name"]'</msg>
+<msg time="2025-09-15T16:36:59.845636" level="INFO">xpath criteria: //android.widget.EditText[@hint="User Name"]</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${SALON_EMAIL}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:13.505594" elapsed="0.339957"/>
+<status status="PASS" start="2025-09-15T16:36:59.637259" elapsed="0.208562"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:13.851806" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
-<msg time="2025-08-28T11:32:15.576516" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
+<msg time="2025-09-15T16:36:59.854896" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
+<msg time="2025-09-15T16:37:01.571254" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
 <arg>${SIGN_IN_TITLE}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:13.845880" elapsed="1.730805"/>
+<status status="PASS" start="2025-09-15T16:36:59.846213" elapsed="1.725290"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:12.076160" elapsed="3.500701"/>
+<status status="PASS" start="2025-09-15T16:36:58.113861" elapsed="3.457891"/>
 </kw>
 <kw name="And user input correct Password" owner="sign-in-keywords">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:15.742324" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
+<msg time="2025-09-15T16:37:01.837534" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:15.578358" elapsed="0.164135"/>
+<status status="PASS" start="2025-09-15T16:37:01.573753" elapsed="0.263974"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:15.748774" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="Password"]'.</msg>
-<msg time="2025-08-28T11:32:15.998957" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
+<msg time="2025-09-15T16:37:01.847445" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint="Password"]'.</msg>
+<msg time="2025-09-15T16:37:02.093886" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:15.742820" elapsed="0.256301"/>
+<status status="PASS" start="2025-09-15T16:37:01.838127" elapsed="0.255970"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:16.006364" level="INFO">Typing text 'Dev123!@#' into text field 'xpath=//android.widget.EditText[@hint="Password"]'</msg>
-<msg time="2025-08-28T11:32:17.057316" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
+<msg time="2025-09-15T16:37:02.105065" level="INFO">Typing text 'Dev123!@#' into text field 'xpath=//android.widget.EditText[@hint="Password"]'</msg>
+<msg time="2025-09-15T16:37:03.214609" level="INFO">xpath criteria: //android.widget.EditText[@hint="Password"]</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${SALON_PASSWORD}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:15.999445" elapsed="1.058065"/>
+<status status="PASS" start="2025-09-15T16:37:02.094526" elapsed="1.120292"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:15.577754" elapsed="1.479937"/>
+<status status="PASS" start="2025-09-15T16:37:01.572758" elapsed="1.642303"/>
 </kw>
 <kw name="Then user tap on Sign In button" owner="sign-in-keywords">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:17.065094" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
-<msg time="2025-08-28T11:32:18.603369" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
+<msg time="2025-09-15T16:37:03.228060" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="false"]'.</msg>
+<msg time="2025-09-15T16:37:04.763421" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="false"]</msg>
 <arg>${SIGN_IN_TITLE}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:17.059272" elapsed="1.544257"/>
+<status status="PASS" start="2025-09-15T16:37:03.218333" elapsed="1.545292"/>
 </kw>
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:18.826945" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
+<msg time="2025-09-15T16:37:04.997125" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
 <arg>${SIGN_IN_BUTTON}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:18.603841" elapsed="0.223280"/>
+<status status="PASS" start="2025-09-15T16:37:04.764096" elapsed="0.233221"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:18.833226" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="true"]'.</msg>
-<msg time="2025-08-28T11:32:19.084303" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
+<msg time="2025-09-15T16:37:05.006678" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Sign In" and @clickable="true"]'.</msg>
+<msg time="2025-09-15T16:37:05.420424" level="INFO">xpath criteria: //android.view.View[@content-desc="Sign In" and @clickable="true"]</msg>
 <arg>${SIGN_IN_BUTTON}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:18.827434" elapsed="0.257055"/>
+<status status="PASS" start="2025-09-15T16:37:04.997658" elapsed="0.423072"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:24.086428" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-09-15T16:37:10.422211" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:19.084906" elapsed="5.001755"/>
+<status status="PASS" start="2025-09-15T16:37:05.421195" elapsed="5.001243"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:17.058666" elapsed="7.028172"/>
+<status status="PASS" start="2025-09-15T16:37:03.217323" elapsed="7.205312"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:29.088908" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-09-15T16:37:15.424019" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:24.087532" elapsed="5.001604"/>
+<status status="PASS" start="2025-09-15T16:37:10.423229" elapsed="5.001029"/>
 </kw>
 <kw name="And the user is on Checkout tab" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:29.438118" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:15.730390" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
 <arg>${CHANGE_POSITION_TEXT}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:29.090864" elapsed="0.347430"/>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:15.426308" elapsed="0.304293"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:29.090328" elapsed="0.348136"/>
-</kw>
-<kw name="Set Element to Test Message" owner="common-keywords">
-<kw name="Set Test Message" owner="BuiltIn">
-<msg time="2025-08-28T11:32:29.440146" level="INFO">Set test message to:
-Success Message: xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</msg>
-<arg>Success Message: ${element}</arg>
-<doc>Sets message for the current test case.</doc>
-<status status="PASS" start="2025-08-28T11:32:29.439865" elapsed="0.000394"/>
-</kw>
-<arg>${PAYMENT_SUCCESS_MESSAGE}</arg>
-<status status="PASS" start="2025-08-28T11:32:29.439102" elapsed="0.001284"/>
+<status status="PASS" start="2025-09-15T16:37:15.425524" elapsed="0.305260"/>
 </kw>
 <tag>Positive</tag>
 <tag>UI</tag>
-<status status="PASS" start="2025-08-28T11:32:09.034592" elapsed="20.406402">Success Message: xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</status>
+<status status="PASS" start="2025-09-15T16:36:55.087282" elapsed="20.644910"/>
 </test>
-<test id="s1-t2" name="Verify the user checkout with CASH method successfully" line="17">
+<test id="s1-t2" name="Verify the user checkout with PAID EXTERNALLY method successfully" line="35">
 <kw name="Given the user is on Checkout tab" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:29.680048" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:15.975294" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
 <arg>${CHANGE_POSITION_TEXT}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:29.444223" elapsed="0.236340"/>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:15.736413" elapsed="0.239094"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:29.443729" elapsed="0.237014"/>
-</kw>
-<kw name="When user select Technician" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:29.925896" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
-<arg>${TECHNICIAN_CARD}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:29.681931" elapsed="0.244154"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:29.932271" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc, "Mira")]'.</msg>
-<msg time="2025-08-28T11:32:30.234272" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
-<arg>${TECHNICIAN_CARD}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:29.926450" elapsed="0.308006"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:29.681409" elapsed="0.553218"/>
-</kw>
-<kw name="Then the system displays the Select Service screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:31.081066" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Services"]</msg>
-<arg>${SELECT_SERVICE_TITLE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:30.236184" elapsed="0.845121"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:30.235574" elapsed="0.846049"/>
-</kw>
-<kw name="And user select Service" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:31.448162" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Lip Wax") and contains(@content-desc,"15 mins")]</msg>
-<arg>${SERVICE_CARD}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:31.083313" elapsed="0.365039"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:31.455266" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc,"Lip Wax") and contains(@content-desc,"15 mins")]'.</msg>
-<msg time="2025-08-28T11:32:31.723849" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Lip Wax") and contains(@content-desc,"15 mins")]</msg>
-<arg>${SERVICE_CARD}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:31.448676" elapsed="0.275384"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:31.082726" elapsed="0.641503"/>
-</kw>
-<kw name="Then user tap on Payment button" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:32.446282" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"][@enabled='true']</msg>
-<arg>${PAYMENT_BUTTON}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:31.725712" elapsed="0.720801"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:32.452949" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Payment"][@enabled='true']'.</msg>
-<msg time="2025-08-28T11:32:32.756796" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"][@enabled='true']</msg>
-<arg>${PAYMENT_BUTTON}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:32.446830" elapsed="0.310155"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:37.758711" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:32.757365" elapsed="5.001572"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:31.725118" elapsed="6.033997"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:42.760759" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:37.759814" elapsed="5.001172"/>
-</kw>
-<kw name="And the system displays the Checkout Payment screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:43.158237" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Checkout"]</msg>
-<arg>${PAYMENT_CHECKOUT_TITLE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:42.762473" elapsed="0.395950"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:42.761887" elapsed="0.396702"/>
-</kw>
-<kw name="Then user select CASH method" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:43.359835" level="INFO">xpath criteria: //android.view.View[@content-desc="Cash"]</msg>
-<arg>${CASH}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:43.159876" elapsed="0.200134"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:43.366402" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Cash"]'.</msg>
-<msg time="2025-08-28T11:32:43.651674" level="INFO">xpath criteria: //android.view.View[@content-desc="Cash"]</msg>
-<arg>${CASH}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:43.360413" elapsed="0.291478"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:43.159330" elapsed="0.492764"/>
-</kw>
-<kw name="And the system displays the Payment by Cash screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:44.704640" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Back Payment by Cash"]</msg>
-<arg>${PAYMENT_BY_CASH_TITLE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:43.653365" elapsed="1.051785"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:43.652772" elapsed="1.052648"/>
-</kw>
-<kw name="And user tap on Begin Charge button in Payment by Cash screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:44.945081" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Begin Charge"]</msg>
-<arg>${CASH_BEGIN_CHARGE_BUTTON}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:44.706957" elapsed="0.238284"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:44.951722" level="INFO">Clicking element 'xpath=//android.view.View[normalize-space(@content-desc)="Begin Charge"]'.</msg>
-<msg time="2025-08-28T11:32:45.256535" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Begin Charge"]</msg>
-<arg>${CASH_BEGIN_CHARGE_BUTTON}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:44.945563" elapsed="0.311133"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:50.257888" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:45.257039" elapsed="5.001075"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:44.706403" elapsed="5.551885"/>
-</kw>
-<kw name="Then the system navigate user to Payment Confirmed screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:50.407502" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Your payment is confirmed!"]</msg>
-<arg>${PAYMENT_IS_CONFIRMED}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:50.259671" elapsed="0.148023"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:50.259138" elapsed="0.148772"/>
-</kw>
-<kw name="Then the system displays Payment successfully message" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:50.561409" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</msg>
-<arg>${PAYMENT_SUCCESS_MESSAGE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:50.410436" elapsed="0.151252"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:50.409716" elapsed="0.152246"/>
-</kw>
-<kw name="When user tap on No Receipt button" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:50.711373" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="No receipt"]</msg>
-<arg>${NO_RECEIPT_BUTTON}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:50.563580" elapsed="0.148078"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:50.718029" level="INFO">Clicking element 'xpath=//android.view.View[normalize-space(@content-desc)="No receipt"]'.</msg>
-<msg time="2025-08-28T11:32:51.962055" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="No receipt"]</msg>
-<arg>${NO_RECEIPT_BUTTON}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:50.712026" elapsed="1.250182"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:32:56.963102" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:51.962518" elapsed="5.000808"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:50.563015" elapsed="6.400491"/>
-</kw>
-<kw name="Then the system navigate user back to Checkout Tab" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:57.252348" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
-<arg>${CHANGE_POSITION_TEXT}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:56.964775" elapsed="0.287892"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:56.964154" elapsed="0.288783"/>
-</kw>
-<kw name="Set Element to Test Message" owner="common-keywords">
-<kw name="Set Test Message" owner="BuiltIn">
-<msg time="2025-08-28T11:32:57.255391" level="INFO">Set test message to:
-Success Message: xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</msg>
-<arg>Success Message: ${element}</arg>
-<doc>Sets message for the current test case.</doc>
-<status status="PASS" start="2025-08-28T11:32:57.254805" elapsed="0.000834"/>
-</kw>
-<arg>${PAYMENT_SUCCESS_MESSAGE}</arg>
-<status status="PASS" start="2025-08-28T11:32:57.253903" elapsed="0.001935"/>
-</kw>
-<tag>Positive</tag>
-<tag>UI</tag>
-<status status="PASS" start="2025-08-28T11:32:29.442622" elapsed="27.814144">Success Message: xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</status>
-</test>
-<test id="s1-t3" name="Verify the user checkout with PAID EXTERNALLY method successfully" line="35">
-<kw name="Given the user is on Checkout tab" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:57.426860" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
-<arg>${CHANGE_POSITION_TEXT}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:57.259968" elapsed="0.167150"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:57.259276" elapsed="0.168076"/>
+<status status="PASS" start="2025-09-15T16:37:15.735768" elapsed="0.239965"/>
 </kw>
 <kw name="And user select Technician" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:57.597952" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:16.191002" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Bethany")]</msg>
 <arg>${TECHNICIAN_CARD}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:57.429221" elapsed="0.168889"/>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:15.977797" elapsed="0.213465"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:57.605340" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc, "Mira")]'.</msg>
-<msg time="2025-08-28T11:32:57.837823" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Mira")]</msg>
+<msg time="2025-09-15T16:37:16.205771" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc, "Bethany")]'.</msg>
+<msg time="2025-09-15T16:37:16.456302" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Bethany")]</msg>
 <arg>${TECHNICIAN_CARD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:57.598420" elapsed="0.239600"/>
+<status status="PASS" start="2025-09-15T16:37:16.191783" elapsed="0.264749"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:57.428439" elapsed="0.409751"/>
+<status status="PASS" start="2025-09-15T16:37:15.976936" elapsed="0.479840"/>
 </kw>
 <kw name="Then the system displays the Select Service screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:58.518356" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Services"]</msg>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:17.237880" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Services"]</msg>
 <arg>${SELECT_SERVICE_TITLE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:57.839606" elapsed="0.679328"/>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:16.458730" elapsed="0.779367"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:57.839056" elapsed="0.680159"/>
+<status status="PASS" start="2025-09-15T16:37:16.457712" elapsed="0.780646"/>
 </kw>
 <kw name="And user select Service" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:58.721949" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Lip Wax") and contains(@content-desc,"15 mins")]</msg>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:17.617448" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"10 mins")]</msg>
 <arg>${SERVICE_CARD}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:58.521310" elapsed="0.200835"/>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:17.240916" elapsed="0.376774"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:58.729178" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc,"Lip Wax") and contains(@content-desc,"15 mins")]'.</msg>
-<msg time="2025-08-28T11:32:58.992760" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Lip Wax") and contains(@content-desc,"15 mins")]</msg>
+<msg time="2025-09-15T16:37:17.632526" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"10 mins")]'.</msg>
+<msg time="2025-09-15T16:37:18.446210" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Classic Manicure") and contains(@content-desc,"10 mins")]</msg>
 <arg>${SERVICE_CARD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:58.723197" elapsed="0.269725"/>
+<status status="PASS" start="2025-09-15T16:37:17.618237" elapsed="0.828191"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:32:58.520141" elapsed="0.472953"/>
+<status status="PASS" start="2025-09-15T16:37:17.240010" elapsed="1.206655"/>
 </kw>
-<kw name="Then user tap on Payment button" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:59.650680" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"][@enabled='true']</msg>
-<arg>${PAYMENT_BUTTON}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:32:58.994316" elapsed="0.656662"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:32:59.657864" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Payment"][@enabled='true']'.</msg>
-<msg time="2025-08-28T11:32:59.877299" level="INFO">xpath criteria: //android.view.View[@content-desc="Payment"][@enabled='true']</msg>
-<arg>${PAYMENT_BUTTON}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:32:59.651441" elapsed="0.226042"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:33:04.879022" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:32:59.877799" elapsed="5.001451"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:32:58.993779" elapsed="5.885654"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:33:09.881050" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:33:04.880023" elapsed="5.001255"/>
-</kw>
-<kw name="And the system displays the Checkout Payment screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:10.118553" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="MAIN MENU &gt; Checkout"]</msg>
-<arg>${PAYMENT_CHECKOUT_TITLE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:09.882742" elapsed="0.235970"/>
-</kw>
-<status status="PASS" start="2025-08-28T11:33:09.882137" elapsed="0.236745"/>
-</kw>
-<kw name="And user select PAID EXTERNALLY method" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:10.319492" level="INFO">xpath criteria: //android.view.View[@content-desc="Paid Externally"]</msg>
-<arg>${PAID_EXTERNALLY}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:10.120037" elapsed="0.199639"/>
+<kw name="And user proceed to add new client successfully" owner="tab-checkout-keyword">
+<kw name="user press on Add Client button" owner="tab-checkout-keyword">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:18.698858" level="INFO">xpath criteria: (//android.view.View[@content-desc="Client"])[1]</msg>
+<arg>${ADD_CLIENT_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:18.449684" elapsed="0.249383"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:10.326065" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Paid Externally"]'.</msg>
-<msg time="2025-08-28T11:33:11.401905" level="INFO">xpath criteria: //android.view.View[@content-desc="Paid Externally"]</msg>
-<arg>${PAID_EXTERNALLY}</arg>
+<msg time="2025-09-15T16:37:18.709445" level="INFO">Clicking element 'xpath=(//android.view.View[@content-desc="Client"])[1]'.</msg>
+<msg time="2025-09-15T16:37:19.736194" level="INFO">xpath criteria: (//android.view.View[@content-desc="Client"])[1]</msg>
+<arg>${ADD_CLIENT_BUTTON}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:33:10.319989" elapsed="1.082130"/>
+<status status="PASS" start="2025-09-15T16:37:18.699510" elapsed="1.036921"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:33:14.403533" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:33:11.402567" elapsed="3.001196"/>
+<status status="PASS" start="2025-09-15T16:37:18.449166" elapsed="1.287558"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:10.119516" elapsed="4.284430"/>
+<kw name="user should see the Select Client modal" owner="tab-checkout-keyword">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:19.867277" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"SELECT CLIENT")]</msg>
+<arg>${SELECT_CLIENT_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:19.738047" elapsed="0.129475"/>
 </kw>
-<kw name="Then system navigate user to Tip screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:14.548547" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Back Tips"]</msg>
-<arg>${TIPS_SCREEN_TITLE}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:14.405305" elapsed="0.143459"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:20.010583" level="INFO">xpath criteria: //android.view.View[normalize-space(@hint)="Phone Number"][@clickable='false']</msg>
+<arg>${SEARCH_CLIENT_FIELD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:19.867935" elapsed="0.142829"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:14.404766" elapsed="0.144387"/>
+<status status="PASS" start="2025-09-15T16:37:19.737247" elapsed="0.273704"/>
 </kw>
-<kw name="When user tap on Skip the Tip button" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:14.681366" level="INFO">xpath criteria: //android.view.View[@content-desc="Skip"]</msg>
-<arg>${SKIP_TIP_BUTTON}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:14.551494" elapsed="0.130033"/>
+<kw name="user proceed to input not exist client's phone number" owner="tab-checkout-keyword">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:20.022306" level="INFO">Clicking element 'xpath=//android.view.View[normalize-space(@hint)="Phone Number"][@clickable='false']'.</msg>
+<msg time="2025-09-15T16:37:20.238433" level="INFO">xpath criteria: //android.view.View[normalize-space(@hint)="Phone Number"][@clickable='false']</msg>
+<arg>${SEARCH_CLIENT_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.011987" elapsed="0.226666"/>
+</kw>
+<kw name="Input Random US Phone Number" owner="common-keywords">
+<kw name="Generate Random US Phone Number" owner="common-keywords">
+<kw name="Random Int" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:20.242091" level="INFO">${valid_first_number} = 7</msg>
+<var>${valid_first_number}</var>
+<arg>min=2</arg>
+<arg>max=9</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.241206" elapsed="0.000986"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-09-15T16:37:20.243210" level="INFO">${rest_number} = 475208978</msg>
+<var>${rest_number}</var>
+<arg>9</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.242557" elapsed="0.000732"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-09-15T16:37:20.244190" level="INFO">${valid_phonenumber} = 7475208978</msg>
+<var>${valid_phonenumber}</var>
+<arg>SEPARATOR=</arg>
+<arg>${valid_first_number}</arg>
+<arg>${rest_number}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.243651" elapsed="0.000609"/>
+</kw>
+<return>
+<value>${valid_phonenumber}</value>
+<status status="PASS" start="2025-09-15T16:37:20.244423" elapsed="0.000139"/>
+</return>
+<msg time="2025-09-15T16:37:20.245205" level="INFO">${phone_number} = 7475208978</msg>
+<var>${phone_number}</var>
+<status status="PASS" start="2025-09-15T16:37:20.240422" elapsed="0.004853"/>
+</kw>
+<kw name="Input number" owner="common-keywords">
+<kw name="Split String To Characters" owner="String">
+<msg time="2025-09-15T16:37:20.246909" level="INFO">${digits} = ['7', '4', '7', '5', '2', '0', '8', '9', '7', '8']</msg>
+<var>${digits}</var>
+<arg>${number}</arg>
+<doc>Splits the given ``string`` to characters.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.246525" elapsed="0.000456"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:20.259298" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="7"]'.</msg>
+<msg time="2025-09-15T16:37:21.441454" level="INFO">xpath criteria: //android.view.View[@content-desc="7"]</msg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.249898" elapsed="1.191802"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:20.247894" elapsed="1.193991"/>
+</kw>
+<var name="${digit}">7</var>
+<status status="PASS" start="2025-09-15T16:37:20.247570" elapsed="1.194649"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:21.452767" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="4"]'.</msg>
+<msg time="2025-09-15T16:37:22.185372" level="INFO">xpath criteria: //android.view.View[@content-desc="4"]</msg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:21.444569" elapsed="0.741015"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:21.442945" elapsed="0.742865"/>
+</kw>
+<var name="${digit}">4</var>
+<status status="PASS" start="2025-09-15T16:37:21.442570" elapsed="0.743587"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:22.196352" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="7"]'.</msg>
+<msg time="2025-09-15T16:37:22.906291" level="INFO">xpath criteria: //android.view.View[@content-desc="7"]</msg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:22.188774" elapsed="0.717766"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:22.186979" elapsed="0.720221"/>
+</kw>
+<var name="${digit}">7</var>
+<status status="PASS" start="2025-09-15T16:37:22.186630" elapsed="0.721008"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:22.918637" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="5"]'.</msg>
+<msg time="2025-09-15T16:37:23.625106" level="INFO">xpath criteria: //android.view.View[@content-desc="5"]</msg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:22.910062" elapsed="0.715240"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:22.908531" elapsed="0.716959"/>
+</kw>
+<var name="${digit}">5</var>
+<status status="PASS" start="2025-09-15T16:37:22.907954" elapsed="0.717955"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:23.636834" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="2"]'.</msg>
+<msg time="2025-09-15T16:37:24.355856" level="INFO">xpath criteria: //android.view.View[@content-desc="2"]</msg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:23.628293" elapsed="0.727767"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:23.627156" elapsed="0.729106"/>
+</kw>
+<var name="${digit}">2</var>
+<status status="PASS" start="2025-09-15T16:37:23.626264" elapsed="0.730444"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:24.366187" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="0"]'.</msg>
+<msg time="2025-09-15T16:37:25.077185" level="INFO">xpath criteria: //android.view.View[@content-desc="0"]</msg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:24.358375" elapsed="0.719023"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:24.357526" elapsed="0.720062"/>
+</kw>
+<var name="${digit}">0</var>
+<status status="PASS" start="2025-09-15T16:37:24.357140" elapsed="0.720868"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:25.089015" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="8"]'.</msg>
+<msg time="2025-09-15T16:37:25.813234" level="INFO">xpath criteria: //android.view.View[@content-desc="8"]</msg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:25.081046" elapsed="0.732428"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:25.078852" elapsed="0.734857"/>
+</kw>
+<var name="${digit}">8</var>
+<status status="PASS" start="2025-09-15T16:37:25.078400" elapsed="0.735683"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:25.824283" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="9"]'.</msg>
+<msg time="2025-09-15T16:37:26.513232" level="INFO">xpath criteria: //android.view.View[@content-desc="9"]</msg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:25.816862" elapsed="0.696554"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:25.814808" elapsed="0.698929"/>
+</kw>
+<var name="${digit}">9</var>
+<status status="PASS" start="2025-09-15T16:37:25.814421" elapsed="0.699619"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:26.524537" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="7"]'.</msg>
+<msg time="2025-09-15T16:37:27.213090" level="INFO">xpath criteria: //android.view.View[@content-desc="7"]</msg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:26.516703" elapsed="0.696621"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:26.514722" elapsed="0.698775"/>
+</kw>
+<var name="${digit}">7</var>
+<status status="PASS" start="2025-09-15T16:37:26.514372" elapsed="0.699798"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:27.224511" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="8"]'.</msg>
+<msg time="2025-09-15T16:37:27.903215" level="INFO">xpath criteria: //android.view.View[@content-desc="8"]</msg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:27.217071" elapsed="0.686358"/>
+</kw>
+<arg>'${digit}' == '0'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_0}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '1'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '2'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '3'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_3}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '4'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_4}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '5'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_5}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '6'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_6}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '7'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_7}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '8'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_8}</arg>
+<arg>ELSE IF</arg>
+<arg>'${digit}' == '9'</arg>
+<arg>Click Element</arg>
+<arg>${NUMERIC_KEYPAD_9}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-15T16:37:27.215090" elapsed="0.688606"/>
+</kw>
+<var name="${digit}">8</var>
+<status status="PASS" start="2025-09-15T16:37:27.214633" elapsed="0.689388"/>
+</iter>
+<var>${digit}</var>
+<value>@{digits}</value>
+<status status="PASS" start="2025-09-15T16:37:20.247168" elapsed="7.656944"/>
+</for>
+<arg>${phone_number}</arg>
+<status status="PASS" start="2025-09-15T16:37:20.245794" elapsed="7.658520"/>
+</kw>
+<return>
+<value>${phone_number}</value>
+<status status="PASS" start="2025-09-15T16:37:27.904436" elapsed="0.000130"/>
+</return>
+<status status="PASS" start="2025-09-15T16:37:20.239221" elapsed="7.665654"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:14.688967" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Skip"]'.</msg>
-<msg time="2025-08-28T11:33:14.845930" level="INFO">xpath criteria: //android.view.View[@content-desc="Skip"]</msg>
-<arg>${SKIP_TIP_BUTTON}</arg>
+<msg time="2025-09-15T16:37:27.912957" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Done"]'.</msg>
+<msg time="2025-09-15T16:37:28.131999" level="INFO">xpath criteria: //android.view.View[@content-desc="Done"]</msg>
+<arg>${NUMERIC_KEYPAD_DONE}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:33:14.681867" elapsed="0.164327"/>
+<status status="PASS" start="2025-09-15T16:37:27.905179" elapsed="0.227033"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:14.550896" elapsed="0.295619"/>
+<status status="PASS" start="2025-09-15T16:37:20.011365" elapsed="8.121080"/>
 </kw>
-<kw name="Then system displays the Payment by Paid Externally screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:15.809180" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Paid Externally"]</msg>
-<arg>${PAID_EXTERNALLY_TEXT}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:14.848336" elapsed="0.961025"/>
+<kw name="user should see the validation text when input not exist client'sphone number" owner="tab-checkout-keyword">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:29.516796" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Not a member yet.")]
+xpath criteria: //android.widget.ImageView[contains(@content-desc,"Not a member yet.")]</msg>
+<arg>${CLIENT_NOT_EXIST_VALIDATION_TEXT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:28.134308" elapsed="1.382687"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:14.847747" elapsed="0.961786"/>
+<status status="PASS" start="2025-09-15T16:37:28.133120" elapsed="1.384119"/>
 </kw>
-<kw name="And user tap on Begin Charge button in Payment by Paid Externally screen" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:16.032048" level="INFO">xpath criteria: //android.view.View[@content-desc="Begin Charge"]</msg>
-<arg>${PAID_EXTERNALLY_BEGIN_CHARGE_BUTTON}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:15.810811" elapsed="0.221435"/>
+<kw name="user press on &quot;Create New Client&quot; button" owner="tab-checkout-keyword">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:29.658372" level="INFO">xpath criteria: //android.view.View[@content-desc="Create New Client"]</msg>
+<arg>${ADD_NEW_CLIENT_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:29.518542" elapsed="0.140002"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:16.040231" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Begin Charge"]'.</msg>
-<msg time="2025-08-28T11:33:16.274547" level="INFO">xpath criteria: //android.view.View[@content-desc="Begin Charge"]</msg>
-<arg>${PAID_EXTERNALLY_BEGIN_CHARGE_BUTTON}</arg>
+<msg time="2025-09-15T16:37:29.666678" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Create New Client"]'.</msg>
+<msg time="2025-09-15T16:37:30.683323" level="INFO">xpath criteria: //android.view.View[@content-desc="Create New Client"]</msg>
+<arg>${ADD_NEW_CLIENT_BUTTON}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:33:16.032765" elapsed="0.241970"/>
+<status status="PASS" start="2025-09-15T16:37:29.658886" elapsed="1.024634"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:33:21.276028" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:33:16.275084" elapsed="5.001170"/>
+<status status="PASS" start="2025-09-15T16:37:29.517846" elapsed="1.165963"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:15.810277" elapsed="5.466161"/>
+<kw name="user should see the Select Contact form" owner="tab-checkout-keyword">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:30.847255" level="INFO">xpath criteria: //android.view.View[@content-desc="SELECT CONTACT"]</msg>
+<arg>${SELECT_CONTACT_FORM_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:30.685129" elapsed="0.162374"/>
 </kw>
-<kw name="Then the system navigate user to Payment Confirmed screen" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:21.455631" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Your payment is confirmed!"]</msg>
-<arg>${PAYMENT_IS_CONFIRMED}</arg>
+<msg time="2025-09-15T16:37:31.007764" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="First Name"]</msg>
+<arg>${CLIENT_FIRST_NAME_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:21.277817" elapsed="0.177984"/>
+<status status="PASS" start="2025-09-15T16:37:30.847988" elapsed="0.159951"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:21.277281" elapsed="0.178845"/>
-</kw>
-<kw name="And the system displays Payment successfully message" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:21.589025" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</msg>
-<arg>${PAYMENT_SUCCESS_MESSAGE}</arg>
+<msg time="2025-09-15T16:37:31.154333" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Last Name"]</msg>
+<arg>${CLIENT_LAST_NAME_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:21.458113" elapsed="0.131079"/>
+<status status="PASS" start="2025-09-15T16:37:31.008300" elapsed="0.146238"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:21.457161" elapsed="0.132203"/>
-</kw>
-<kw name="When user tap on No Receipt button" owner="tab-checkout-keyword">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:21.776612" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="No receipt"]</msg>
-<arg>${NO_RECEIPT_BUTTON}</arg>
+<msg time="2025-09-15T16:37:31.312406" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Email"]</msg>
+<arg>${CLIENT_EMAIL_FIELD}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:21.590960" elapsed="0.185826"/>
+<status status="PASS" start="2025-09-15T16:37:31.154921" elapsed="0.157679"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:31.507549" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Address"]</msg>
+<arg>${CLIENT_ADDRESS_FIELD}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:31.312981" elapsed="0.194761"/>
+</kw>
+<status status="PASS" start="2025-09-15T16:37:30.684335" elapsed="0.823606"/>
+</kw>
+<kw name="user input valid data in all required fields in Select Contact form" owner="tab-checkout-keyword">
+<kw name="Input Random Data in Create Client form" owner="common-keywords">
+<kw name="Generate Random First Name" owner="common-keywords">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:31.511551" level="INFO">${first_name} = Kevin</msg>
+<var>${first_name}</var>
+<status status="PASS" start="2025-09-15T16:37:31.510851" elapsed="0.000907"/>
+</kw>
+<return>
+<value>${first_name}</value>
+<status status="PASS" start="2025-09-15T16:37:31.511882" elapsed="0.000100"/>
+</return>
+<msg time="2025-09-15T16:37:31.512340" level="INFO">${first_name_data} = Kevin</msg>
+<var>${first_name_data}</var>
+<status status="PASS" start="2025-09-15T16:37:31.510272" elapsed="0.002160"/>
+</kw>
+<kw name="Generate Random Last Name" owner="common-keywords">
+<kw name="Last Name" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:31.514438" level="INFO">${last_name} = King</msg>
+<var>${last_name}</var>
+<status status="PASS" start="2025-09-15T16:37:31.513452" elapsed="0.001083"/>
+</kw>
+<return>
+<value>${last_name}</value>
+<status status="PASS" start="2025-09-15T16:37:31.514699" elapsed="0.000108"/>
+</return>
+<msg time="2025-09-15T16:37:31.515190" level="INFO">${last_name_data} = King</msg>
+<var>${last_name_data}</var>
+<status status="PASS" start="2025-09-15T16:37:31.512850" elapsed="0.002414"/>
+</kw>
+<kw name="Generate Email with Yopmail" owner="common-keywords">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:31.517066" level="INFO">${first_name} = Paula</msg>
+<var>${first_name}</var>
+<status status="PASS" start="2025-09-15T16:37:31.516413" elapsed="0.000742"/>
+</kw>
+<kw name="Replace String Using Regexp" owner="String">
+<msg time="2025-09-15T16:37:31.518070" level="INFO">${user_name} = Paula</msg>
+<var>${user_name}</var>
+<arg>${first_name}</arg>
+<arg>[^A-Za-z0-9]</arg>
+<arg>_</arg>
+<doc>Replaces ``pattern`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-09-15T16:37:31.517437" elapsed="0.000712"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2025-09-15T16:37:31.518829" level="INFO">${user_name} = paula</msg>
+<var>${user_name}</var>
+<arg>${user_name}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2025-09-15T16:37:31.518472" elapsed="0.000425"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-09-15T16:37:31.519592" level="INFO">${email} = paula@yopmail.com</msg>
+<var>${email}</var>
+<arg>SEPARATOR=@</arg>
+<arg>${user_name}</arg>
+<arg>yopmail.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-09-15T16:37:31.519168" elapsed="0.000489"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2025-09-15T16:37:31.519798" elapsed="0.000087"/>
+</return>
+<msg time="2025-09-15T16:37:31.520209" level="INFO">${email_data} = paula@yopmail.com</msg>
+<var>${email_data}</var>
+<status status="PASS" start="2025-09-15T16:37:31.515765" elapsed="0.004508"/>
+</kw>
+<kw name="Generate Random Address" owner="common-keywords">
+<kw name="Street Address" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:31.521974" level="INFO">${street_address} = 86641 Emily Ferry Suite 486</msg>
+<var>${street_address}</var>
+<doc>:example: '791 Crist Parks'</doc>
+<status status="PASS" start="2025-09-15T16:37:31.521260" elapsed="0.000787"/>
+</kw>
+<kw name="City" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:31.522896" level="INFO">${city} = Timburgh</msg>
+<var>${city}</var>
+<doc>:example: 'Sashabury'</doc>
+<status status="PASS" start="2025-09-15T16:37:31.522326" elapsed="0.000648"/>
+</kw>
+<kw name="State" owner="FakerLibrary">
+<msg time="2025-09-15T16:37:31.523552" level="INFO">${state} = Nebraska</msg>
+<var>${state}</var>
+<status status="PASS" start="2025-09-15T16:37:31.523234" elapsed="0.000384"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-09-15T16:37:31.524377" level="INFO">${full_address} = 86641 Emily Ferry Suite 486TimburghNebraska</msg>
+<var>${full_address}</var>
+<arg>SEPARATOR=</arg>
+<arg>${street_address}</arg>
+<arg>${city}</arg>
+<arg>${state}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-09-15T16:37:31.523862" elapsed="0.000604"/>
+</kw>
+<return>
+<value>${full_address}</value>
+<status status="PASS" start="2025-09-15T16:37:31.524620" elapsed="0.000084"/>
+</return>
+<msg time="2025-09-15T16:37:31.525018" level="INFO">${address_data} = 86641 Emily Ferry Suite 486TimburghNebraska</msg>
+<var>${address_data}</var>
+<status status="PASS" start="2025-09-15T16:37:31.520704" elapsed="0.004378"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:21.783258" level="INFO">Clicking element 'xpath=//android.view.View[normalize-space(@content-desc)="No receipt"]'.</msg>
-<msg time="2025-08-28T11:33:21.943208" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="No receipt"]</msg>
-<arg>${NO_RECEIPT_BUTTON}</arg>
+<msg time="2025-09-15T16:37:31.535508" level="INFO">Clicking element 'xpath=//android.widget.EditText[normalize-space(@hint)="First Name"]'.</msg>
+<msg time="2025-09-15T16:37:32.696549" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="First Name"]</msg>
+<arg>${first_name_locator}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T11:33:21.777127" elapsed="0.166381"/>
+<status status="PASS" start="2025-09-15T16:37:31.525347" elapsed="1.171762"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T11:33:26.944937" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T11:33:21.943872" elapsed="5.001288"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:32.706206" level="INFO">Typing text 'Kevin' into text field 'xpath=//android.widget.EditText[normalize-space(@hint)="First Name"]'</msg>
+<msg time="2025-09-15T16:37:32.911156" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="First Name"]</msg>
+<arg>${first_name_locator}</arg>
+<arg>${first_name_data}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:32.697548" elapsed="0.213781"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:21.590108" elapsed="5.355225"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:32.920122" level="INFO">Clicking element 'xpath=//android.widget.EditText[normalize-space(@hint)="Last Name"]'.</msg>
+<msg time="2025-09-15T16:37:33.803038" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Last Name"]</msg>
+<arg>${last_name_locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:32.911717" elapsed="0.891536"/>
 </kw>
-<kw name="Then the system navigate user back to Checkout Tab" owner="tab-checkout-keyword">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T11:33:27.095229" level="INFO">xpath criteria: //android.view.View[normalize-space(@content-desc)="Change position"]</msg>
-<arg>${CHANGE_POSITION_TEXT}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2025-08-28T11:33:26.947603" elapsed="0.147801"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:33.812304" level="INFO">Typing text 'King' into text field 'xpath=//android.widget.EditText[normalize-space(@hint)="Last Name"]'</msg>
+<msg time="2025-09-15T16:37:34.646428" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Last Name"]</msg>
+<arg>${last_name_locator}</arg>
+<arg>${last_name_data}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:33.803748" elapsed="0.842851"/>
 </kw>
-<status status="PASS" start="2025-08-28T11:33:26.946808" elapsed="0.148787"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:34.655271" level="INFO">Clicking element 'xpath=//android.widget.EditText[normalize-space(@hint)="Email"]'.</msg>
+<msg time="2025-09-15T16:37:36.282237" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Email"]</msg>
+<arg>${email_locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:34.646992" elapsed="1.635452"/>
 </kw>
-<kw name="Set Element to Test Message" owner="common-keywords">
-<kw name="Set Test Message" owner="BuiltIn">
-<msg time="2025-08-28T11:33:27.097997" level="INFO">Set test message to:
-Success Message: xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</msg>
-<arg>Success Message: ${element}</arg>
-<doc>Sets message for the current test case.</doc>
-<status status="PASS" start="2025-08-28T11:33:27.097746" elapsed="0.000365"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:36.291710" level="INFO">Typing text 'paula@yopmail.com' into text field 'xpath=//android.widget.EditText[normalize-space(@hint)="Email"]'</msg>
+<msg time="2025-09-15T16:37:36.470787" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Email"]</msg>
+<arg>${email_locator}</arg>
+<arg>${email_data}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:36.282929" elapsed="0.188060"/>
 </kw>
-<arg>${PAYMENT_SUCCESS_MESSAGE}</arg>
-<status status="PASS" start="2025-08-28T11:33:27.096703" elapsed="0.001536"/>
+<kw name="Hide Keyboard" owner="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" start="2025-09-15T16:37:36.471349" elapsed="3.615316"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:40.098030" level="INFO">Clicking element 'xpath=//android.widget.EditText[normalize-space(@hint)="Address"]'.</msg>
+<msg time="2025-09-15T16:37:40.307066" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Address"]</msg>
+<arg>${address_locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:40.087139" elapsed="0.220132"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:40.316652" level="INFO">Typing text '86641 Emily Ferry Suite 486TimburghNebraska' into text field 'xpath=//android.widget.EditText[normalize-space(@hint)="Address"]'</msg>
+<msg time="2025-09-15T16:37:41.382855" level="INFO">xpath criteria: //android.widget.EditText[normalize-space(@hint)="Address"]</msg>
+<arg>${address_locator}</arg>
+<arg>${address_data}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:40.307716" elapsed="1.075366"/>
+</kw>
+<return>
+<value>${first_name_data}</value>
+<value>${last_name_data}</value>
+<value>${email_data}</value>
+<value>${address_data}</value>
+<status status="PASS" start="2025-09-15T16:37:41.383238" elapsed="0.000108"/>
+</return>
+<arg>${CLIENT_FIRST_NAME_FIELD}</arg>
+<arg>${CLIENT_LAST_NAME_FIELD}</arg>
+<arg>${CLIENT_EMAIL_FIELD}</arg>
+<arg>${CLIENT_ADDRESS_FIELD}</arg>
+<status status="PASS" start="2025-09-15T16:37:31.509230" elapsed="9.874789"/>
+</kw>
+<status status="PASS" start="2025-09-15T16:37:31.508379" elapsed="9.875803"/>
+</kw>
+<kw name="user press on &quot;Submit&quot; button to create new client" owner="tab-checkout-keyword">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:41.392717" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Submit"]'.</msg>
+<msg time="2025-09-15T16:37:43.587538" level="INFO">xpath criteria: //android.view.View[@content-desc="Submit"]</msg>
+<arg>${SUBMIT_ADD_NEW_CLIENT_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-09-15T16:37:41.385345" elapsed="2.202403"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-09-15T16:37:43.776454" level="INFO">xpath criteria: //android.view.View[@content-desc="Remove"]</msg>
+<arg>${REMOVE_CLIENT_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-09-15T16:37:43.588281" elapsed="0.188358"/>
+</kw>
+<status status="PASS" start="2025-09-15T16:37:41.384785" elapsed="2.392039"/>
+</kw>
+<status status="PASS" start="2025-09-15T16:37:18.448387" elapsed="25.328557"/>
 </kw>
 <tag>Positive</tag>
 <tag>UI</tag>
-<status status="PASS" start="2025-08-28T11:32:57.258162" elapsed="29.841202">Success Message: xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]</status>
+<status status="PASS" start="2025-09-15T16:37:15.734205" elapsed="28.043460"/>
 </test>
-<status status="PASS" start="2025-08-28T11:31:52.943583" elapsed="94.157497"/>
+<status status="PASS" start="2025-09-15T16:36:32.799110" elapsed="70.980324"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="3" fail="0" skip="0">Positive</stat>
-<stat pass="3" fail="0" skip="0">UI</stat>
+<stat pass="2" fail="0" skip="0">Positive</stat>
+<stat pass="2" fail="0" skip="0">UI</stat>
 </tag>
 <suite>
-<stat name="Checkout" id="s1" pass="3" fail="0" skip="0">Checkout</stat>
+<stat name="Checkout" id="s1" pass="2" fail="0" skip="0">Checkout</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-09-15T16:36:37.332318" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 26: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-09-15T16:36:37.333247" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 31: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-09-15T16:36:37.334218" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 51: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-09-15T16:36:37.334687" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 55: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-09-15T16:36:37.335174" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 62: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-09-15T16:36:37.335635" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 69: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-09-15T16:36:37.336408" level="WARN">Error in file 'D:\Automation-Testing\Robot-Framework\Salonbookly-POS\resources\common\common-keywords.robot' on line 90: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

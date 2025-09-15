@@ -1,6 +1,8 @@
 *** Settings ***
-
 Library    AppiumLibrary
+Library    Collections
+Library    String
+Library    FakerLibrary    locale=en_US
 
 Resource    ../../resources/common/common-keywords.robot
 Resource    ../../resources/common/common-variables.robot
