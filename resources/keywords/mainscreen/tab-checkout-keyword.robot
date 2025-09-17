@@ -2,6 +2,53 @@
 Resource    ../../../resources/common/common-settings.robot
 
 *** Keywords ***
+#SET UP ARGUMENTS
+Extract Value After Dollar Symbol
+    [Arguments]    ${element}    ${attribute}=contentDescription    ${split_char}=$
+    ${desc}=    Get Element Attribute    ${element}    ${attribute}
+    ${after_dollar}=    Split String    ${desc}    ${split_char}    1
+    ${value_after_dollar}=    Strip String    ${after_dollar}[1]
+    RETURN    ${value_after_dollar}
+
+Sum Service Amounts
+    [Arguments]    @{amounts}
+    ${total}=    Set Variable    0.0
+    FOR    ${amount}    IN    @{amounts}
+        ${amount_float}=    Convert To Number    ${amount}
+        ${total}=    Evaluate    ${total} + ${amount_float}
+    END
+    RETURN    ${total}
+
+user select Service
+    [Arguments]    ${n}=1
+    ${services_list_data}=    Get Webelements    ${SERVICE_CARDS}
+    Log    ${services_list_data}
+    ${count_services}=    Get Length    ${services_list_data}
+    Run Keyword If    ${count_services} == 0    Fail    No service cards found
+    @{selected_service_amounts}=    Create List
+    FOR    ${i}    IN RANGE    ${n}
+        ${index}=    Evaluate    __import__('random').randrange(${count_services})
+        ${random_service}=    Get From List    ${services_list_data}    ${index}
+        ${desc}=    Get Element Attribute    ${random_service}    contentDescription
+        ${service_amount}=    Extract Value After Dollar Symbol    ${random_service}
+        Append To List    ${selected_service_amounts}    ${service_amount}
+        Click Element    ${random_service}
+        Log    Clicked index ${index} -> ${desc}
+        Sleep    0.5s
+    END
+    ${total_service_amount}=    Sum Service Amounts    @{selected_service_amounts}
+    Log    Total service amount: ${total_service_amount}
+
+user select Technician
+    ${technician_list_data}=    Get Webelements    ${TECHNICIAN_CARD}
+    Log    ${technician_list_data}
+    ${count_technician}=    Get Length    ${technician_list_data}
+    Log    ${count_technician}
+    ${index}=    Evaluate    __import__('random').randrange(${count_technician})
+    ${random_technician}=    Get From List    ${technician_list_data}    ${index}
+    ${desc}=    Get Element Attribute    ${random_technician}    contentDescription
+    Click Element    ${random_technician}
+
 #Main screen - Checkout tab elements
 the user is on Checkout tab
     Wait Until Element Is Visible    ${CHANGE_POSITION_TEXT}
@@ -9,16 +56,6 @@ the user is on Checkout tab
 the system navigate user back to Checkout Tab
     Wait Until Element Is Visible    ${CHANGE_POSITION_TEXT}
     
-user select Technician
-    Wait Until Element Is Visible    ${TECHNICIAN_CARD}
-    Click Element    ${TECHNICIAN_CARD}
-
-the system displays the Select Service screen
-    Wait Until Element Is Visible    ${SELECT_SERVICE_TITLE}
-
-user select Service
-    Wait Until Element Is Visible    ${SERVICE_CARD}
-    Click Element    ${SERVICE_CARD}
 
 #Add Client keyword
 user press on Add Client button

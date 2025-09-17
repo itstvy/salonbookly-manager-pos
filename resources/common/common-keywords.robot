@@ -11,6 +11,7 @@ Access to POS
     ...    appPackage=${APP_PACKAGE}
     ...    appActivity=${APP_ACTIVITY}
     ...    automationName=${AUTOMATION_NAME}
+    ...    noReset=true
     Sleep    5s
 
 #Set Test Message
@@ -23,12 +24,12 @@ Generate Random US Phone Number
     ${valid_first_number}=    Random Int    min=2    max=9
     ${rest_number}=    Generate Random String    9    [NUMBERS]
     ${valid_phonenumber}=    Catenate    SEPARATOR=    ${valid_first_number}    ${rest_number}
-    [RETURN]    ${valid_phonenumber}
+    RETURN    ${valid_phonenumber}
 
 Input Random US Phone Number
     ${phone_number}=    Generate Random US Phone Number
     Input number    ${phone_number}
-    [RETURN]    ${phone_number}
+    RETURN    ${phone_number}
 
 Input number
     [Arguments]    ${number}
@@ -48,25 +49,25 @@ Input number
 
 Generate Random First Name
     ${first_name}=    First Name
-    [RETURN]    ${first_name}
+    RETURN    ${first_name}
 
 Generate Random Last Name
     ${last_name}=    Last Name
-    [RETURN]    ${last_name}
+    RETURN    ${last_name}
 
 Generate Email with Yopmail
     ${first_name}=    First Name
     ${user_name}=    Replace String Using Regexp    ${first_name}    [^A-Za-z0-9]    _
     ${user_name}=    Convert To Lowercase    ${user_name}
     ${email}=    Catenate    SEPARATOR=@    ${user_name}    yopmail.com
-    [RETURN]    ${email}
+    RETURN    ${email}
 
 Generate Random Address
     ${street_address}=    Street Address
     ${city}=    City
     ${state}=    State
     ${full_address}=    Catenate    SEPARATOR=    ${street_address}    ${city}    ${state}
-    [RETURN]    ${full_address}
+    RETURN    ${full_address}
 
 Input Random Data in Create Client form
     [Arguments]    ${first_name_locator}    ${last_name_locator}    ${email_locator}    ${address_locator}
@@ -87,4 +88,4 @@ Input Random Data in Create Client form
     Click Element    ${address_locator}
     Input Text    ${address_locator}    ${address_data}
 
-    [RETURN]    ${first_name_data}    ${last_name_data}    ${email_data}    ${address_data}
+    RETURN    ${first_name_data}    ${last_name_data}    ${email_data}    ${address_data}

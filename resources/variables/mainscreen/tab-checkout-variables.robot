@@ -7,43 +7,24 @@ Resource    ../../../resources/common/common-settings.robot
 ${PAYMENT_SUCCESS_MESSAGE}    xpath=//android.view.View[normalize-space(@content-desc)="Proceed payment successfully"]
 
 #Data
-${TECHNICIAN_NAME}    Bethany
+${TECHNICIAN_NAME}    Tyla
 ${SERVICE_NAME}    Classic Manicure
 ${SERVICE_DURATION}    10 mins
 ${REAL_SUBTOTAL_AMOUNT}
 ${REAL_TAX_AMOUNT}
 ${REAL_BALANCE_DUE}
-${EXIST_CLIENT_PHONE_NUMBER}    5555555501
+${EXIST_CLIENT_PHONE_NUMBER}    6668882525
 
-#Elements in Checkout tab
-${CHANGE_POSITION_TEXT}    xpath=//android.view.View[normalize-space(@content-desc)="Change position"]
-${CHANGE_TECHNICIAN_POSITION_BUTTON_ON}    xpath=//android.view.View[@content-desc="On"]
-${CHANGE_TECHNICIAN_POSITION_BUTTON_OFF}    xpath=//android.view.View[@content-desc="Off"]
-${REMOTE_SCREEN_ICON_BUTTON}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]
-${PRINT_ICON_BUTTON}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[6]
-${NOTIFICATION_ICON_BUTTON}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[7]
-${TECHNICIAN_CARD}    xpath=//android.view.View[contains(@content-desc, "${TECHNICIAN_NAME}")]
-${CURRENT_SESSION_MANAGER_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Current session Manager"]
-${MANAGER_VIEW_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Manager View"]
-${SIGN_OUT_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Sign Out"]
-
-#Elements of bottom navigation bar
-${CHECKOUT_TAB_BUTTON}    xpath=//android.view.View[@content-desc="Checkout"]
-${TRANSACTIONS_TAB_BUTTON}    xpath=//android.view.View[@content-desc="Transactions"]
-${CLIENTS_TAB_BUTTON}    xpath=//android.view.View[@content-desc="Client"]
-${TICKET_TAB_BUTTON}    xpath=//android.view.View[@content-desc="Tickets"]
-${GIFT_CARD_TAB_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Gift Card"]
-${WAITING_SERVICES_TAB_BUTTON}    xpath=//android.view.View[normalize-space(@content-desc)="Waiting Services"]
-${APPOINTMENTS_TAB_BUTTON}    xpath=//android.view.View[@content-desc="Appointments"]
-${CHECK_IN_TAB_BUTTON}    xpath=//android.view.View[@content-desc="Check-in"]
-
-#Elements in Select Services screen
+#Select Technician & Services
+${TECHNICIAN_CARD}    xpath=//android.view.View[contains(@content-desc," Min")]
 ${SELECT_SERVICE_TITLE}    xpath=//android.view.View[normalize-space(@content-desc)="MAIN MENU > Services"]
 ${SEARCH_SERVICE_FIELD}    xpath=//android.widget.EditText[normalize-space(@hint)="Search by Service Name"]
 ${CHANGE_SERVICE_POSITION_ON}    xpath=//android.view.View[@content-desc="On"]
-${CHANGE_SERVICE_POSITION_ON}    xpath=//android.view.View[@content-desc="Off"]
+${CHANGE_SERVICE_POSITION_OFF}    xpath=//android.view.View[@content-desc="Off"]
 ${ALL_CATEGORIES_BUTTON}    xpath=//android.view.View[contains(@content-desc,"All Categories")]
-${SERVICE_CARD}    xpath=//android.view.View[contains(@content-desc,"${SERVICE_NAME}") and contains(@content-desc,"${SERVICE_DURATION}")]
+${SERVICE_CARD}    xpath=//android.view.View[contains(@content-desc," mins") and contains(@content-desc,"$")]
+${SERVICE_LIST}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[8]
+${SERVICE_CARDS}    xpath=//android.view.View[contains(@content-desc,"mins")]
 
 #Element in Add Client at Cart
 ${ADD_CLIENT_BUTTON}    xpath=(//android.view.View[@content-desc="Client"])[1]
@@ -87,7 +68,6 @@ ${QUICK_DISCOUNT_OPTION}    xpath=//android.view.View[normalize-space(@content-d
 ${APPLY_VOUCHER_OPTION}    xpath=//android.view.View[normalize-space(@content-desc)="Apply Voucher"]/android.view.View[@selected='false']
 ${PERCENTAGE_TAB_SELECTED}    xpath=//android.view.View[@content-desc="Percentage"][@selected='true']
 ${FIXED_AMOUNT_TAB_SELECTED}    xpath=//android.view.View[normalize-space(@content-desc)="Fixed amount"][@selected='true']
-
 
 #Elements in Payment Checkout screen (Input balance due)
 ${PAYMENT_CHECKOUT_TITLE}    xpath=//android.view.View[normalize-space(@content-desc)="MAIN MENU > Checkout"]
