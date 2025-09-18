@@ -16,9 +16,8 @@ Access to POS
 
 #Set Test Message
 Set Element to Test Message
-    [Arguments]    ${element}    ${append}=True
-    Set Test Message    Success Message: ${element}
-    # Set Test Message    Payment Confirm: ${element}    append=${append}
+    [Arguments]    ${element}    ${append}=True    
+    Set Test Message    : ${element}    append=${append}
 
 Generate Random US Phone Number
     ${valid_first_number}=    Random Int    min=2    max=9

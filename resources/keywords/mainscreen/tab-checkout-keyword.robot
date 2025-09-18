@@ -3,14 +3,14 @@ Resource    ../../../resources/common/common-settings.robot
 
 *** Keywords ***
 #SET UP ARGUMENTS
-Extract Value After Dollar Symbol
+Get Service Price of selected service
     [Arguments]    ${element}    ${attribute}=contentDescription    ${split_char}=$
     ${desc}=    Get Element Attribute    ${element}    ${attribute}
     ${after_dollar}=    Split String    ${desc}    ${split_char}    1
     ${value_after_dollar}=    Strip String    ${after_dollar}[1]
     RETURN    ${value_after_dollar}
 
-Sum Service Amounts
+Sum Service Amounts of selected services
     [Arguments]    @{amounts}
     ${total}=    Set Variable    0.0
     FOR    ${amount}    IN    @{amounts}
@@ -19,25 +19,28 @@ Sum Service Amounts
     END
     RETURN    ${total}
 
+#-------------------------------------------------------------------------------------------------------
+
 user select Service
     [Arguments]    ${n}=1
     ${services_list_data}=    Get Webelements    ${SERVICE_CARDS}
-    Log    ${services_list_data}
     ${count_services}=    Get Length    ${services_list_data}
-    Run Keyword If    ${count_services} == 0    Fail    No service cards found
-    @{selected_service_amounts}=    Create List
+    
+    @{selected_services}=    Create List
+
     FOR    ${i}    IN RANGE    ${n}
         ${index}=    Evaluate    __import__('random').randrange(${count_services})
         ${random_service}=    Get From List    ${services_list_data}    ${index}
         ${desc}=    Get Element Attribute    ${random_service}    contentDescription
-        ${service_amount}=    Extract Value After Dollar Symbol    ${random_service}
-        Append To List    ${selected_service_amounts}    ${service_amount}
+        ${service_amount}=    Get Service Price of selected service    ${random_service}
+        Append To List    ${selected_services}    ${service_amount}
+
         Click Element    ${random_service}
-        Log    Clicked index ${index} -> ${desc}
         Sleep    0.5s
+        Set Element to Test Message    Service:${desc}
     END
-    ${total_service_amount}=    Sum Service Amounts    @{selected_service_amounts}
-    Log    Total service amount: ${total_service_amount}
+    ${subtotal}=    Sum Service Amounts of selected services    @{selected_services}
+    Set Element to Test Message    Subtotal:${subtotal}
 
 user select Technician
     ${technician_list_data}=    Get Webelements    ${TECHNICIAN_CARD}
@@ -46,8 +49,10 @@ user select Technician
     Log    ${count_technician}
     ${index}=    Evaluate    __import__('random').randrange(${count_technician})
     ${random_technician}=    Get From List    ${technician_list_data}    ${index}
-    ${desc}=    Get Element Attribute    ${random_technician}    contentDescription
+    ${technician}=    Get Element Attribute    ${random_technician}    contentDescription
     Click Element    ${random_technician}
+    Set Element to Test Message    Technician:${technician}
+
 
 #Main screen - Checkout tab elements
 the user is on Checkout tab
