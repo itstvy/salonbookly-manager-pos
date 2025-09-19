@@ -1,1 +1,1 @@
-robot --output logs/output.xml --log logs/log.html --report logs/report.html tests/mainscreen/checkout.robot
+robot --output logs/output.xml --log logs/log.html --report logs/report.html tests/employee/employee.robot

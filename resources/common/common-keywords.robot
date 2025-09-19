@@ -19,6 +19,7 @@ Set Element to Test Message
     [Arguments]    ${element}    ${append}=True    
     Set Test Message    : ${element}    append=${append}
 
+
 Generate Random US Phone Number
     ${valid_first_number}=    Random Int    min=2    max=9
     ${rest_number}=    Generate Random String    9    [NUMBERS]
@@ -29,6 +30,21 @@ Input Random US Phone Number
     ${phone_number}=    Generate Random US Phone Number
     Input number    ${phone_number}
     RETURN    ${phone_number}
+
+Input Data in Phone Number field
+    [Arguments]    ${phone_number_locator}
+    Click Element    ${phone_number_locator}
+    Input Random US Phone Number
+    Click Element    ${NUMERIC_KEYPAD_DONE}
+
+Input Valid Data in Password and Confirm Password fields
+    [Arguments]    ${password_locator}    ${confirm_password_locator}
+    Click Element    locator=${password_locator}
+    Input Text    locator=${password_locator}    text=${CORRECT_PASSWORD}
+    Hide Keyboard
+    Click Element    locator=${confirm_password_locator}
+    Input Text    locator=${confirm_password_locator}    text=${CORRECT_PASSWORD}
+    Hide Keyboard
 
 Input number
     [Arguments]    ${number}
@@ -48,14 +64,19 @@ Input number
 
 Generate Random First Name
     ${first_name}=    First Name
+    Set Suite Variable    ${GENERATED_FIRST_NAME}    ${first_name}
     RETURN    ${first_name}
+
+Generate Random Nick Name
+    ${nick_name}=    Set Variable    ${GENERATED_FIRST_NAME}
+    RETURN    ${nick_name}
 
 Generate Random Last Name
     ${last_name}=    Last Name
     RETURN    ${last_name}
 
 Generate Email with Yopmail
-    ${first_name}=    First Name
+    ${first_name}=    Set Variable    ${GENERATED_FIRST_NAME}
     ${user_name}=    Replace String Using Regexp    ${first_name}    [^A-Za-z0-9]    _
     ${user_name}=    Convert To Lowercase    ${user_name}
     ${email}=    Catenate    SEPARATOR=@    ${user_name}    yopmail.com
@@ -63,22 +84,25 @@ Generate Email with Yopmail
 
 Generate Random Address
     ${street_address}=    Street Address
-    ${city}=    City
-    ${state}=    State
+    ${city}=    Set Variable    Miami
+    ${state}=    Set Variable    Florida
     ${full_address}=    Catenate    SEPARATOR=    ${street_address}    ${city}    ${state}
     RETURN    ${full_address}
-
+    
 Input Random Data in Create Client form
-    [Arguments]    ${first_name_locator}    ${last_name_locator}    ${email_locator}    ${address_locator}
+    [Arguments]    ${first_name_locator}    ${last_name_locator}   ${email_locator}    ${address_locator}
     ${first_name_data}=    Generate Random First Name
     ${last_name_data}=    Generate Random Last Name
     ${email_data}=    Generate Email with Yopmail
     ${address_data}=    Generate Random Address
+
     Click Element    ${first_name_locator}
     Input Text    ${first_name_locator}    ${first_name_data}
+    Hide Keyboard
     
     Click Element    ${last_name_locator}
     Input Text    ${last_name_locator}    ${last_name_data}
+    Hide Keyboard
 
     Click Element    ${email_locator}
     Input Text    ${email_locator}    ${email_data}
@@ -86,5 +110,18 @@ Input Random Data in Create Client form
 
     Click Element    ${address_locator}
     Input Text    ${address_locator}    ${address_data}
+    Hide Keyboard
 
-    RETURN    ${first_name_data}    ${last_name_data}    ${email_data}    ${address_data}
+    RETURN    ${first_name_data}    ${last_name_data}   ${email_data}    ${address_data}
+
+Scroll Screen Down
+    [Arguments]    ${times}=1
+    FOR    ${i}    IN RANGE    ${times}
+        Swipe    50    300   50    1    1000
+    END
+
+Scroll Screen Up
+    [Arguments]    ${times}=1
+    FOR    ${i}    IN RANGE    ${times}
+        Swipe    50   30   50    300    1000
+    END

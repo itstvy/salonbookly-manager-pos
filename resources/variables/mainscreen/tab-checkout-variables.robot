@@ -29,7 +29,7 @@ ${SERVICE_CARDS}    xpath=//android.view.View[contains(@content-desc,"mins")]
 #Element in Add Client at Cart
 ${ADD_CLIENT_BUTTON}    xpath=(//android.view.View[@content-desc="Client"])[1]
 ${SELECT_CLIENT_TITLE}    xpath=//android.view.View[contains(@content-desc,"SELECT CLIENT")]
-${SEARCH_CLIENT_FIELD}    xpath=//android.view.View[normalize-space(@hint)="Phone Number"][@clickable='false']
+${SEARCH_PN_FIELD}    xpath=//android.view.View[normalize-space(@hint)="Phone Number"][@clickable='false']
 ${SEARCH_RESULT_TITLE}    xpath=//android.view.View[@content-desc="Search Result"]
 ${SUBMIT_BUTTON_TO_ADD_CLIENT}    xpath=//android.view.View[@content-desc="Submit"]
 ${REMOVE_CLIENT_BUTTON}    xpath=//android.view.View[@content-desc="Remove"]

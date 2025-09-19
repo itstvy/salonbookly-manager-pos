@@ -61,7 +61,6 @@ the user is on Checkout tab
 the system navigate user back to Checkout Tab
     Wait Until Element Is Visible    ${CHANGE_POSITION_TEXT}
     
-
 #Add Client keyword
 user press on Add Client button
     Wait Until Element Is Visible    ${ADD_CLIENT_BUTTON}
@@ -69,10 +68,10 @@ user press on Add Client button
 
 user should see the Select Client modal
     Wait Until Element Is Visible    ${SELECT_CLIENT_TITLE}
-    Wait Until Element Is Visible    ${SEARCH_CLIENT_FIELD}
+    Wait Until Element Is Visible    ${SEARCH_PN_FIELD}
 
 user proceed to input exist client's phone number
-    Click Element    ${SEARCH_CLIENT_FIELD}
+    Click Element    ${SEARCH_PN_FIELD}
     Input number    ${EXIST_CLIENT_PHONE_NUMBER}
     Click Element    ${NUMERIC_KEYPAD_DONE}
 
@@ -93,7 +92,7 @@ user proceed to add exist client successfully
 
 #Add New Client
 user proceed to input not exist client's phone number
-    Click Element    ${SEARCH_CLIENT_FIELD}
+    Click Element    ${SEARCH_PN_FIELD}
     Input Random US Phone Number
     Click Element    ${NUMERIC_KEYPAD_DONE}
 

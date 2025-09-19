@@ -29,5 +29,26 @@ ${NUMERIC_KEYPAD_CLEAR}    xpath=//android.view.View[@content-desc="Clear"]
 ${NUMERIC_KEYPAD_CANCEL}    xpath=//android.view.View[@content-desc="Cancel"]
 ${NUMERIC_KEYPAD_DONE}    xpath=//android.view.View[@content-desc="Done"]
 
+#Common Data Input
+${PIN_CODE}    1111
+${DATA_EMPTY}    ${EMPTY}
+${ONLY_SPACES}    ${SPACE}
+${CONTAIN_SPACES}    ${SPACE}abcd${SPACE}
+${LESS_THAN_2_CHARACTERS}    a
+${LESS_THAN_5_CHARACTERS}    abcd
+${MORE_THAN_20_CHARACTERS}    AbcdefhijkAbcdefhijk!@#
+${MORE_THAN_50_CHARACTERS}    AbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijk!@#
+${MORE_THAN_100_CHARACTERS}    AbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijkAbcdefhijk!@#
+
+
+#Common Password Data
+${CORRECT_PASSWORD}    Dev123!@#
+${LESS_THAN_8_CHARACTERS}    Dev123@
+${MISSING_NUMBER}    Dev!!@@##
+${MISSING_SPECIAL_CHARACTERS}    Dev123456
+${MISSING_UPPERCASE}    dev123!@#
+${MISSING_LOWERCASE}    DEV123!@#
+${PASSWORD_CONTAIN_SPACES}    ${SPACE}Dev123!@#${SPACE}
+
 
     
